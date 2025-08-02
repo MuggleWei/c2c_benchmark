@@ -243,7 +243,7 @@ int main(int argc, char *argv[])
 	// initialize log
 	if (muggle_log_complicated_init(MUGGLE_LOG_LEVEL_INFO,
 									MUGGLE_LOG_LEVEL_INFO,
-									"logs/benchmark_c2c_benchmark.log") != 0) {
+									"logs/c2c_benchmark_shm_rbuf.log") != 0) {
 		fprintf(stderr, "failed init log\n");
 		exit(EXIT_FAILURE);
 	}
