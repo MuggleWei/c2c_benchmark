@@ -61,6 +61,13 @@ int c2c_benchmark_bind_core(int32_t core);
  */
 void c2c_benchmark_warmup(int32_t ms);
 
+/**
+ * @brief wait nanoseconds
+ *
+ * @param ns  nanoseconds
+ */
+void c2c_benchmark_wait_ns(int32_t ns);
+
 EXTERN_C_END
 
 #endif // !C2C_BENCHMARK_H_

@@ -104,3 +104,16 @@ void c2c_benchmark_warmup(int32_t ms)
 		}
 	}
 }
+
+void c2c_benchmark_wait_ns(int32_t ns)
+{
+	muggle_time_counter_t warmup_tc;
+	muggle_time_counter_init(&warmup_tc);
+	muggle_time_counter_start(&warmup_tc);
+	while (1) {
+		muggle_time_counter_end(&warmup_tc);
+		if (muggle_time_counter_interval_ns(&warmup_tc) > ns) {
+			break;
+		}
+	}
+}

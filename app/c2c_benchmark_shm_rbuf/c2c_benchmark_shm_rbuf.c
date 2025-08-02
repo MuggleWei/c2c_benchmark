@@ -187,7 +187,7 @@ void proc_producer(thread_args_t *p_args)
 			muggle_shm_ringbuf_w_move(shm_rbuf);
 		}
 
-		muggle_nsleep(args->round_interval_ns);
+		c2c_benchmark_wait_ns(args->round_interval_ns);
 	}
 	LOG_INFO("producer completed");
 }
